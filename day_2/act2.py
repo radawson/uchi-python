@@ -50,13 +50,14 @@ def power_2(a, b):
 # Write a function that checks whether a string is a palindrome or not.
 # The program should take in a string and return True if the string is a palindrome and False if not.
 def is_palindrome(string):
+    l_string = string.lower()
     #  Base case
-    if len(string) <= 1:
+    if len(l_string) <= 1:
         return True
 
     #  Recursive case
     else:
-        return string[0] == string[-1] and is_palindrome(string[1:-1])
+        return l_string[0] == l_string[-1] and is_palindrome(l_string[1:-1])
 
 
 # test cases
