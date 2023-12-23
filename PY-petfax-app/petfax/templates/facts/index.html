@@ -1,7 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="container">
-        <H1>UserFax</H1>
+<div class="container">
+    <H1>UserFax</H1>
+    {% for fact in facts %}
+    <div class="card">
+        <div class="card-header">
+            <h2 class="card-title">Fact No: {{ fact.id }}</h2>
+        </div>
+        <div class="card-body">
+            <p class="card-text">{{ fact.fact }}</p>
+        </div>
+        <div class="card-footer">
+            <p class="card-text">Submitted by: {{ fact.submitter }}</p>
     </div>
+    {% endfor %}
+</div>
 {% endblock %}

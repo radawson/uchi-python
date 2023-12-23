@@ -11,6 +11,10 @@ def create_app():
     models.db.init_app(app)
     migrate = Migrate(app, models.db)
 
+    @app.cli.command('seed')
+    def seed():
+        models.seed_db()
+
     @app.route('/')
     def hello(): 
         return 'Welcome to PetFax'
@@ -18,5 +22,6 @@ def create_app():
     from . import pet, fact
     app.register_blueprint(pet.bp)
     app.register_blueprint(fact.bp)
+    
 
     return app

@@ -9,9 +9,9 @@
     <div class="pets-container">
         {% for pet in pets %}
             <div class="pet">
-                <H2>{{ pet.pet_name }}</H2>
-                <img src="{{ url_for('static', filename='assets/') }}{{pet.pet_photo}}"/>
-                <a href="/pets/{{ pet.pet_id }}">Learn more ⟩</a>
+                <H2>{{ pet.name }}</H2>
+                <img src="{{ url_for('static', filename='assets/') }}{{pet.photo}}"/>
+                <a href="/pets/{{ pet.id }}">Learn more ⟩</a>
             </div>
         {% endfor %}
     </div>

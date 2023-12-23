@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <H1>{{ pet.name }}</H1>
+    <div class="callout">
+        <span style="font-weight: 800">Did you know?</span><br />{{ pet.fact }}
+    </div>
+    <div class="pets-container">
+        <div class="show-pet">
+            <img src="{{ url_for('static', filename='assets/') }}{{ pet.photo }}" />
+        </div>
+    </div>
+    <a href="/pets">⟨　Go back</a>
+</div>
+{% endblock %}
+{% block scripts %}
+{% endblock %}
