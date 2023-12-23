@@ -1,0 +1,23 @@
+<body>
+    <header>
+        <h1>
+            {% if title: %}
+                {{title}}
+            {% else %}
+                Nothing to see here
+            {% endif %}
+        </h1>
+    </header>
+    {% for thing in things %}
+        {{thing}}
+        <br>
+    {% endfor %}
+    <button id="{{button_id}}">Push Me</button>
+
+<script>
+document.getElementById('{{button_id}}').addEventListener('click', function() {
+    alert('You pushed me!');
+});
+
+</script>
+</body>
