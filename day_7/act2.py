@@ -13,13 +13,13 @@ class LinkedList:
         if self.head is None:
             print("Linked list is empty")
         else:
-            current_node = self.head
-            while current_node is not None:
-                print(current_node.data)
-                # print(f"{current_node.data} -> ", end="")
-                # if current_node.reference is None:
-                #     print()
-                current_node = current_node.reference
+            while current is not None:
+                #print(current.data)
+                print(f"{current.data}", end="")
+                if current.reference is not None:
+                    print(" -> ", end="")
+                current = current.reference
+        print()
 
     def add_to_start(self, data):
         new_node = Node(data)
