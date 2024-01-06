@@ -15,6 +15,18 @@ def bubble_sort(lst):
 
     return lst
 
+def get_time(function, list):
+    # get the start time
+    st = time.process_time()
+    result = function(list)
+    # get the end time
+    et = time.process_time()
+
+    # get the execution time
+    elapsed_time = et - st
+    print('Execution time:', elapsed_time, 'seconds')
+    return result
+
 
 if __name__ == "__main__":
     # get the start time
@@ -43,4 +55,9 @@ if __name__ == "__main__":
     # get the execution time
     elapsed_time = et - st
     print('Execution time:', elapsed_time, 'seconds')
+
+    print("_" * 20)
+    print("Best case scenario: sorted list")
+    a_list = [x for x in range(1, 11)]
+    print(get_time(bubble_sort, a_list))
 
