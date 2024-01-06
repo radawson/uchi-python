@@ -18,10 +18,12 @@ def binary_search(data, el):
 
 # Recursive Binary Search Function
 def recursive_bsearch(data, el):
+    # Element is not in the list
     if len(data) == 0:
         return False
     else:
         mid = len(data) // 2
+        # Element is in the middle of the list or the only element left
         if data[mid] == el:
             return True
         elif el < data[mid]:
