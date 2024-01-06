@@ -1,8 +1,8 @@
-# Clock Time
+# CPU Time
 import time
 
 # get the start time
-st = time.time()
+st = time.process_time()
 
 # main program
 # find sum to first 1 million numbers
@@ -15,9 +15,8 @@ time.sleep(3)
 print('Sum of first 1 million numbers is:', sum_x)
 
 # get the end time
-et = time.time()
+et = time.process_time()
 
-# get the execution time
-elapsed_time = et - st
-print(f'Execution time: {elapsed_time} seconds')
-print(f'Execution time: {elapsed_time * 1000} milliseconds')
+# get execution time
+res = et - st
+print(f'CPU Execution time: {res} seconds')
